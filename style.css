@@ -10,6 +10,7 @@
     --primary-dark: #E67E22;
     --secondary: #F9D423;
     --secondary-light: #FFEAA7;
+    --black: #000000;
     --dark: #2C3E50;
     --gray: #7F8C8D;
     --light: #FDF9F4;
@@ -23,7 +24,7 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    color: var(--dark);
+    color: var(--black);
     background-color: var(--white);
     line-height: 1.6;
     overflow-x: hidden;
@@ -84,7 +85,7 @@ h1, h2, h3, h4, .logo, .btn, .nav-menu {
 .logo small {
     font-size: 0.7rem;
     font-weight: 400;
-    color: var(--gray);
+    color: var(--black);
 }
 
 .nav-menu {
@@ -106,7 +107,7 @@ h1, h2, h3, h4, .logo, .btn, .nav-menu {
 
 .btn-nav {
     background: var(--primary);
-    color: var(--white) !important;
+    color: var(--dark) !important;
     padding: 8px 20px;
     border-radius: 50px;
     box-shadow: #2C3E50 0px 10px 20px -10px;
