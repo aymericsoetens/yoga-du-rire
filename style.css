@@ -23,14 +23,19 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+     font-family: 'Poppins', sans-serif;
     color: var(--black);
     background-color: var(--white);
     line-height: 1.6;
     overflow-x: hidden;
 }
+h1, h2, h3, h4,.lobster-two-regular-italic {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
 
-h1, h2, h3, h4, .logo, .btn, .nav-menu {
+ .logo, .btn, .nav-menu {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -221,6 +226,7 @@ h1, h2, h3, h4, .logo, .btn, .nav-menu {
 }
 
 .hero h1 {
+    font-family: "Lobster Two", sans-serif;
     font-size: 3.5rem;
     line-height: 1.2;
     margin-bottom: 24px;
@@ -275,6 +281,7 @@ section {
 }
 
 .section-header h2 {
+    font-family: "Lobster Two", sans-serif;
     font-size: 2.5rem;
     margin-bottom: 16px;
 }
@@ -835,18 +842,16 @@ section {
             width: 480px;
             max-width: 85%;
             height: auto;
-            border-radius: 50%;
-            object-fit: cover;
+            border-radius: 10%;
+           
             border: 5px solid var(--primary);
             box-shadow: var(--shadow-hover);
             margin: 0 auto;
             display: block;
-            transition: transform 0.3s ease;
+            
         }
         
-        .about-image:hover {
-            transform: scale(1.02);
-        }
+      
         
         /* Texte sous la photo (small) recentré et stylisé */
         .photo-credit {
