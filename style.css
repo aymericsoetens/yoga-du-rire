@@ -6,17 +6,17 @@
 }
 
 :root {
-    --primary: #FF8C42;
+    --primary: #f3813a;
     --primary-dark: #E67E22;
     --secondary: #F9D423;
-    --secondary-light: #FFEAA7;
+    --secondary-light: #f7d66c;
     --black: #000000;
     --dark: #2C3E50;
     --gray: #7F8C8D;
     --light: #FDF9F4;
     --white: #FFFFFF;
     --shadow: 0 10px 30px rgba(0,0,0,0.08);
-    --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.534);
+    --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.671);
     --radius: 16px;
     --radius-sm: 12px;
     --transition: all 0.3s ease;
@@ -46,11 +46,12 @@ h1, h2, h3, h4, .logo, .btn, .nav-menu {
     top: 0;
     left: 0;
     width: 100%;
-    background: var(--white);
+   background: var(--white);
     box-shadow: var(--shadow);
     z-index: 1000;
     padding: 16px 0;
     transition: var(--transition);
+    border-bottom: 2px solid var(--primary);
 }
 
 .header .container {
@@ -73,7 +74,7 @@ h1, h2, h3, h4, .logo, .btn, .nav-menu {
 }
 .logo i {
     font-size: 2rem;
-    color: var(--primary);
+    color: var(--black);
 }
 
 .logo span {
@@ -96,13 +97,13 @@ h1, h2, h3, h4, .logo, .btn, .nav-menu {
 
 .nav-menu a {
     text-decoration: none;
-    color: var(--dark);
+    color: var(--black);
     font-weight: 500;
     transition: var(--transition);
 }
 
 .nav-menu a:hover, .nav-menu a.active {
-    color: var(--primary);
+    color: var(--primary-dark);
 }
 
 .btn-nav {
@@ -160,15 +161,16 @@ h1, h2, h3, h4, .logo, .btn, .nav-menu {
 }
 
 .btn-secondary {
-    background: transparent;
-    color: var(--primary);
-    border: 2px solid var(--primary);
+   background: var(--primary);
+    color: var(--black);
+    
 }
 
 .btn-secondary:hover {
     background: var(--primary);
     color: var(--white);
     transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
 }
 
 .btn-large {
@@ -227,7 +229,7 @@ h1, h2, h3, h4, .logo, .btn, .nav-menu {
 
 .hero p {
     font-size: 1.2rem;
-    color: var(--gray);
+    color: var(--black);
     margin-bottom: 32px;
 }
 
@@ -239,7 +241,7 @@ h1, h2, h3, h4, .logo, .btn, .nav-menu {
 }
 
 .hero-contact a {
-    color: var(--dark);
+    color: var(--black);
     text-decoration: none;
     font-weight: 600;
     font-size: 1.1rem;
@@ -264,7 +266,7 @@ section {
 .section-tag {
     display: inline-block;
     background: var(--secondary-light);
-    color: var(--primary-dark);
+    color: var(--black);
     padding: 4px 16px;
     border-radius: 50px;
     font-size: 0.8rem;
@@ -278,7 +280,7 @@ section {
 }
 
 .section-header p {
-    color: var(--gray);
+    color: var(--black);
 }
 
 /* ==================== BIENFAITS ==================== */
@@ -366,7 +368,7 @@ section {
 .how-it-works-footer {
     text-align: center;
     font-style: italic;
-    color: var(--gray);
+    color: var(--black);
     padding-top: 32px;
     border-top: 1px solid #E0E0E0;
 }
@@ -423,7 +425,7 @@ section {
 /* ==================== CTA ==================== */
 .cta {
     background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    color: var(--white);
+    color: var(--black);
     text-align: center;
 }
 
@@ -445,8 +447,8 @@ section {
 }
 
 .cta .btn-primary:hover {
-    background: var(--secondary);
-    color: var(--dark);
+    background: var(--dark);
+    color: var(--white);
 }
 
 /* ==================== FOOTER ==================== */
@@ -611,6 +613,7 @@ section {
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow);
     margin-bottom: 32px;
+    border: 2px solid #E67E22;
 }
 
 .sidebar-card h3 {
@@ -704,72 +707,160 @@ section {
 }
 
 /* ==================== ASTRID PAGE ==================== */
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    margin-bottom: 60px;
-}
-
-.about-text h2 {
-    margin-bottom: 24px;
-}
-
-.signature {
-    margin-top: 32px;
-    font-family: 'Poppins', sans-serif;
-    font-style: italic;
-    color: var(--primary);
-}
-
-.photo-placeholder {
-    background: var(--light);
-    border-radius: var(--radius);
-    padding: 40px;
-    text-align: center;
-}
-
-.photo-placeholder i {
-    font-size: 8rem;
-    color: var(--gray);
-}
-
-.certifications {
-    margin-bottom: 60px;
-}
-.about-image {
-    width: 80%;
-   margin: 20px auto 0;
-    object-fit: cover;
-     border-radius: var(--radius);
-}
-.cert-image{
-    width: 50%;
-    height: auto;
-    display: flex;
-   align-items: center;
-    border-radius: var(--radius-sm);
-}
-.cert-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 24px;
-    margin-top: 24px;
-}
-
-.cert-item {
-    background: var(--light);
-    padding: 20px;
-    border-radius: var(--radius-sm);
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.cert-item i {
-    font-size: 1.5rem;
-    color: var(--primary);
-}
+  .about-photo {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        
+        .about-photo .photo-placeholder {
+            background: transparent;
+            padding: 0;
+            display: inline-block;
+            max-width: 100%;
+        }
+        
+        .about-image {
+            width: 480px;
+            max-width: 85%;
+            height: auto;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--primary);
+            box-shadow: var(--shadow-hover);
+            margin: 0 auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .about-image:hover {
+            transform: scale(1.02);
+        }
+        
+        /* Texte sous la photo (small) recentré et stylisé */
+        .photo-credit {
+            text-align: center;
+            display: block;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: var(--gray);
+            font-style: italic;
+            letter-spacing: 0.3px;
+        }
+        
+        /* Grille des certifications centrée et harmonisée */
+        .certifications {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .certifications h3 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .certifications h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 3px;
+        }
+        
+        .cert-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .cert-image {
+            width: 400px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 140, 66, 0.2);
+            object-fit: cover;
+        }
+        
+        .cert-image:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--primary);
+        }
+        
+        /* Ajustement de la carte de présentation (texte + signature) */
+        .about-grid {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+        
+        .session-card.featured {
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+            border: 2px solid var(--primary);
+            background: var(--white);
+            transition: transform 0.3s;
+        }
+        
+        .session-card.featured:hover {
+            transform: translateY(-5px);
+        }
+        
+        .session-card.featured h2 {
+            color: var(--black);
+            font-weight: 700;
+        }
+        
+        .signature {
+            margin-top: 28px;
+            font-family: 'Poppins', sans-serif;
+            font-style: italic;
+            color: var(--primary);
+            font-size: 1.1rem;
+            border-top: 1px dashed #ff6f00;
+            padding-top: 20px;
+            display: inline-block;
+        }
+        
+        /* Réorganisation pour éviter les décalages sur mobile */
+        @media (max-width: 768px) {
+            .cert-image {
+                width: 160px;
+            }
+            .cert-grid {
+                gap: 1.2rem;
+            }
+            .session-card.featured {
+                padding: 24px;
+            }
+            .about-image {
+                width: 220px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .cert-image {
+                width: 130px;
+            }
+            .cert-grid {
+                gap: 1rem;
+            }
+        }
 
 /* ==================== CONTACT PAGE ==================== */
 .contact-grid {
@@ -812,7 +903,7 @@ section {
 
 .form-note {
     font-size: 0.8rem;
-    color: var(--gray);
+    color: var(--black);
     margin-top: 16px;
 }
 
@@ -912,7 +1003,7 @@ section {
         }
 
         .enterprise-card p {
-            color: var(--gray);
+            color: var(--black);
             line-height: 1.65;
             margin-bottom: 0;
             flex-grow: 1;
@@ -939,7 +1030,7 @@ section {
 
         .hero-sub {
             font-size: 1.2rem;
-            color: var(--primary-dark);
+            color: var(--black);
             margin-top: 0.5rem;
             font-weight: 500;
             letter-spacing: -0.2px;
@@ -988,7 +1079,7 @@ section {
 
         .enterprise-intro p {
             font-size: 1.1rem;
-            color: var(--dark);
+            color: var(--black);
             font-weight: 500;
         }
 
