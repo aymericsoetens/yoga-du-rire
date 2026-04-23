@@ -2,11 +2,11 @@
     background: $white;
     border-radius: 24px;
     overflow: hidden;
-    width: 60%;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.582);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     opacity: 0;
-    transform: translateY(30px) scale(0.98);
+   
     animation: videoReveal 1.5s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
     animation-delay: 0.5s;
 
@@ -16,13 +16,13 @@
     }
 
     &:hover {
-        transform: translateY(-5px) scale(1.01);
-        box-shadow: 0 30px 50px rgba(0, 0, 0, 0.2);
+      
+        box-shadow: 0 30px 50px rgba(0, 0, 0, 0.459);
     }
 }
 
 .video-crop-wrapper {
-    max-height: 280px;
+    max-height: 300px;
     border-color: solid 2px #E67E22;
     overflow: hidden;
     background: #f5f5f5;
@@ -31,8 +31,10 @@
 }
 
 .instagram-cropped {
-    transform: translateY(-70px);
-    margin-bottom: -160px;
+   
+     transform: translateY(-70px);
+    margin-bottom: 160px;
+    max-height: 430px;
     animation: contentFadeIn 3s ease-out forwards;
 
     @keyframes contentFadeIn {
@@ -41,11 +43,12 @@
     }
 
     .instagram-media,
-   
+    iframe,
     blockquote {
+       
         margin: 0 auto !important;
-        width: 100% !important;
-        min-width: 100px !important;
+       width: 50% !important;
+        min-width: 200px !important;
     }
 }
 
@@ -62,7 +65,7 @@
         @include flex-center;
         gap: 8px;
         transition: color 0.3s ease;
-        font-weight: 500;
+        font-weight: 400;
 
         &:hover { color: $primary; }
     }
@@ -76,7 +79,7 @@
 }
 
 .video-container {
-    max-width: 270px;
+     max-width: 270px;
     flex: 1;
     background: transparent;
     border-radius: 28px;
@@ -85,13 +88,14 @@
     transition: all 0.3s ease;
     border: 5px solid $primary;
 
+
     &:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+       
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.507);
     }
 }
 
 .instagram-showcase {
-    padding: 0px 0 60px;
+    padding: 0px 0px 60px;
    
 }
