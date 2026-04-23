@@ -1,0 +1,33 @@
+.legal-card {
+    background: $white;
+    border-radius: $radius;
+    box-shadow: $shadow;
+    padding: 48px;
+    margin-bottom: 40px;
+
+    h2 {
+        color: $primary-dark;
+        margin-bottom: 24px;
+        font-size: 1.8rem;
+        border-left: 5px solid $primary;
+        padding-left: 20px;
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+    }
+
+    p, li {
+        color: #3a4a5a;
+    }
+
+    a {
+        color: $primary-dark;
+    }
+}
+
+.highlight {
+    background: $secondary-light;
+    padding: 20px;
+    border-radius: $radius-sm;
+    margin: 24px 0;
+    color: #2c3e50;
+}

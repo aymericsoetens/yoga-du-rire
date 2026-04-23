@@ -1,0 +1,117 @@
+section {
+    padding: 80px 0;
+}
+
+.page-hero {
+    @include gradient-bg($secondary-light, $light);
+    padding: 140px 0 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 16px;
+        color: $text-dark;
+    }
+
+    p {
+        color: $text-body;           // Changé
+        font-size: 1.1rem;
+    }
+}
+
+.page-content {
+    padding: 60px 0;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 48px;
+}
+
+.main-content {
+    p { color: $text-body; }        // Changé
+    h2 { color: $text-dark; }
+}
+
+.how-it-works {
+    background: $light;
+
+    .steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 32px;
+       
+    }
+
+    .step {
+        text-align: center;
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: $primary;
+            color: $black;            // Changé: noir
+            border-radius: 50%;
+            @include flex-center;
+            font-weight: 700;
+            margin: 0 auto 16px;
+        }
+
+        .step-icon {
+            font-size: 2.5rem;
+            color: $primary-dark;
+            margin-bottom: 16px;
+        }
+
+        h3 {
+            margin-bottom: 12px;
+            font-family: 'Poppins', sans-serif;
+            font-style: normal;
+            color: $text-dark;
+        }
+
+        p { color: $text-body; }     // Changé
+    }
+
+    .how-it-works-footer {
+        text-align: center;
+        font-style: italic;
+        color: $text-body;           // Changé
+        padding-top: 32px;
+        border-top: 1px solid #E0E0E0;
+    }
+}
+
+.cta {
+    @include gradient-bg($primary, $primary-dark);
+    color: $black;
+    text-align: center;
+
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 16px;
+        color: $black;               // Noir sur orange
+    }
+
+    p {
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto 32px;
+        color: $black;               // Noir sur orange
+        font-weight: 500;
+    }
+
+    .btn-primary {
+        background: $text-dark;      // Fond foncé
+        color: $white;               // Blanc
+
+        &:hover {
+            background: darken($text-dark, 10%);
+            color: $white;
+            transform: translateY(-3px);
+        }
+    }
+}

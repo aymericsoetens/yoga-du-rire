@@ -1,0 +1,33 @@
+// ==================== ABSTRACTS ====================
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// ==================== BASE ====================
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/accessibility';      // Ajouté
+
+// ==================== COMPONENTS ====================
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/video';
+@import 'components/forms';
+@import 'components/sidebar';
+
+// ==================== LAYOUT ====================
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/hero';
+@import 'layout/sections';
+
+// ==================== PAGES ====================
+@import 'pages/home';
+@import 'pages/seances';
+@import 'pages/apropos';
+@import 'pages/contact';
+@import 'pages/entreprises';
+@import 'pages/yoga-du-rire';
+@import 'pages/mentions-legales';
+@import 'pages/404';
+// ==================== UTILS ====================
+@import 'utils/responsive';

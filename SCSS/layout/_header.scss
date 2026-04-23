@@ -1,0 +1,76 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $white;
+    box-shadow: $shadow;
+    z-index: 1000;
+    padding: 16px 0;
+    transition: $transition;
+    border-bottom: 2px solid $primary;
+
+    .container {
+        @include flex-between;
+    }
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: $dark;
+}
+
+.logo-yoga {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+
+    a {
+        text-decoration: none;
+        color: $text-dark;            // Changé: plus foncé
+        font-weight: 600;            // Augmenté
+        transition: $transition;
+
+        &:hover, &.active {
+            color: $primary-dark;
+        }
+    }
+}
+
+.btn-nav {
+    background: $primary;
+    color: $black !important;        // Changé: noir au lieu de #2c3e50
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 700;               // Augmenté
+
+    &:hover {
+        background: $primary-dark;
+        color: $white !important;    // Blanc au hover
+        transform: translateY(-2px);
+    }
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+
+    span {
+        width: 25px;
+        height: 3px;
+        background: $dark;
+        margin: 3px 0;
+        transition: $transition;
+        border-radius: 3px;
+    }
+}

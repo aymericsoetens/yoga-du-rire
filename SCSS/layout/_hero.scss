@@ -1,0 +1,70 @@
+.hero {
+    @include gradient-bg(#FFF8F0, #FFE8D6);
+    margin-top: 80px;
+    padding: 60px 0;
+}
+
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.hero-content {
+    flex: 1.2;
+    min-width: 300px;
+}
+
+.hero-badge {
+    background: $secondary;
+    color: $black;                   // Changé: noir
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+.hero h1 {
+    font-family: "Lobster Two", sans-serif;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    color: $text-dark;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: $text-body;               // Changé
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.hero-video {
+    flex: 0.9;
+    min-width: 320px;
+}
+/* Skip link - accessibilité */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-dark);
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    z-index: 9999;
+    font-weight: 600;
+    border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+    top: 0;
+}

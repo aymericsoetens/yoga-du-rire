@@ -1,0 +1,178 @@
+// Benefit cards
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.benefit-card {
+    background: $white;
+    padding: 40px 28px;
+    border-radius: $radius;
+    text-align: center;
+    box-shadow: $shadow;
+    transition: $transition;
+
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: $shadow-hover;
+    }
+
+    .benefit-icon {
+        width: 80px;
+        height: 80px;
+        @include gradient-bg($secondary-light, $secondary);
+        border-radius: 50%;
+        @include flex-center;
+        margin: 0 auto 24px;
+
+        i {
+            font-size: 2.5rem;
+            color: $primary-dark;
+        }
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        margin-bottom: 16px;
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        color: $text-dark;
+    }
+
+    p {
+        color: $text-body;          // Changé
+    }
+}
+
+// Session cards
+.session-card {
+     background: $white;
+    border-radius: 24px;
+    padding: 2rem 1.8rem;
+    box-shadow: $shadow;
+    transition: all 0.4s ease;
+    border: 1px solid rgba($primary, 0.15);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+margin-bottom: 20px;
+         &:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 25px 45px -12px rgba(0,0,0,0.25);
+        border-color: $primary;
+
+        &::before { opacity: 1; }
+        .session-icon {
+              background: $primary;
+            color: $black;
+            transform: scale(1.02);
+        }
+    }
+
+    &::before {
+        content: '';
+     position: absolute;
+        top: 0;
+        left: 0;
+        width: 6px;
+        height: 100%;
+        @include gradient-bg($primary, $secondary);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+.session-icon {
+        font-size: 2.8rem;
+        color: $primary-dark;
+        margin-bottom: 1.5rem;
+        background: rgba($primary, 0.1);
+        width: 70px;
+        height: 70px;
+        @include flex-center;
+        border-radius: 20px;
+        transition: all 0.3s;
+    }
+     h3 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        color: $text-dark;
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+    }
+
+    p {
+        color: $text-body;          // Changé
+        line-height: 1.65;
+        flex-grow: 1;
+    }
+}
+
+// Enterprise cards
+.enterprise-card {
+    background: $white;
+    border-radius: 24px;
+    padding: 2rem 1.8rem;
+    box-shadow: $shadow;
+    transition: all 0.4s ease;
+    border: 1px solid rgba($primary, 0.15);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+margin-bottom: 20px;
+    &:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 25px 45px -12px rgba(0,0,0,0.25);
+        border-color: $primary;
+
+        &::before { opacity: 1; }
+        .card-icon {
+            background: $primary;
+            color: $black;
+            transform: scale(1.02);
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 6px;
+        height: 100%;
+        @include gradient-bg($primary, $secondary);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .card-icon {
+        font-size: 2.8rem;
+        color: $primary-dark;
+        margin-bottom: 1.5rem;
+        background: rgba($primary, 0.1);
+        width: 70px;
+        height: 70px;
+        @include flex-center;
+        border-radius: 20px;
+        transition: all 0.3s;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        color: $text-dark;
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+    }
+
+    p {
+        color: $text-body;          // Changé
+        line-height: 1.65;
+        flex-grow: 1;
+    }
+}

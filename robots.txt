@@ -1,3 +1,41 @@
+# robots.txt pour Yoga du Rire - Astrid Soetens
+# https://yogadurire.fr/robots.txt
+
 User-agent: *
 Allow: /
-Sitemap: https://votredomaine.fr/sitemap.xml
+
+# Sitemaps
+Sitemap: https://yogadurire.fr/sitemap.xml
+
+# Délai de crawl (respectueux)
+Crawl-delay: 2
+
+# Interdire l'accès aux dossiers sensibles
+Disallow: /admin/
+Disallow: /backup/
+Disallow: /temp/
+Disallow: /private/
+Disallow: /css/parts/
+Disallow: /js/modules/
+
+# Interdire les paramètres d'URL inutiles
+Disallow: /*.php$
+Disallow: /*?utm_
+Disallow: /*?ref=
+
+# Interdire le crawl des pages d'administration
+Disallow: /wp-admin/
+Disallow: /cgi-bin/
+
+# Optimisation pour les moteurs populaires
+Host: https://yogadurire.fr
+
+# Google spécifique
+User-agent: Googlebot
+Crawl-delay: 1
+Allow: /
+
+# Bing spécifique
+User-agent: bingbot
+Crawl-delay: 1
+Allow: /

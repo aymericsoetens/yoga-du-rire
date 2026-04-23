@@ -1,0 +1,78 @@
+.about-photo {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.about-image {
+    width: 480px;
+    max-width: 85%;
+    height: auto;
+    border-radius: 10%;
+    border: 5px solid $primary;
+    box-shadow: $shadow-hover;
+    margin: 0 auto;
+    display: block;
+}
+
+.certifications {
+    text-align: center;
+    margin-bottom: 60px;
+
+    h3 {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 10px;
+        color: #2c3e50;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: $primary;
+            border-radius: 3px;
+        }
+    }
+}
+
+.cert-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.cert-image {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: $shadow;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 140, 66, 0.2);
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: $shadow-hover;
+        border-color: $primary;
+    }
+}
+
+.signature {
+    margin-top: 28px;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    color: $primary-dark;
+    font-size: 1.1rem;
+    border-top: 1px dashed $primary;
+    padding-top: 20px;
+    display: inline-block;
+}

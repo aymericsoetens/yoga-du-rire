@@ -1,0 +1,31 @@
+// ==================== COULEURS ====================
+$primary: #f3813a;
+$primary-dark: #cf6a18;        // Changé: plus foncé (était #E67E22)
+$secondary: #ffd500;
+$secondary-light: #dbd24e;
+$black: #1a1a1a;
+$dark: #1a2a3a;
+$gray: #393f46;                // Changé: plus foncé (était #5a6a7a)
+$light: #ffffff;
+$white: #ffffff;
+
+// Couleurs de texte spécifiques
+$text-dark: #020202;           // Nouveau: pour les titres
+$text-body: #020202;           // Nouveau: pour le corps du texte (était #3a4a5a)
+$text-light: #4a5a6a;          // Nouveau: texte secondaire
+
+// Ombres
+$shadow: 0 10px 30px rgba(0, 0, 0, 0.267);
+$shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.473);
+
+// Bordures
+$radius: 16px;
+$radius-sm: 12px;
+
+// Transitions
+$transition: all 0.3s ease;
+
+// Breakpoints
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 992px;
+$breakpoint-mobile: 480px;

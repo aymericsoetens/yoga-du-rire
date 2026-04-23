@@ -1,0 +1,50 @@
+// ==================== ACCESSIBILITE ====================
+
+// Focus visible pour la navigation au clavier
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid $primary-dark;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+// Skip link - caché visuellement mais accessible
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: $primary-dark;
+    color: $white;
+    padding: 8px 16px;
+    text-decoration: none;
+    z-index: 9999;
+    font-weight: 600;
+    
+    &:focus {
+        top: 0;
+    }
+}
+
+// Réduction de mouvement pour les utilisateurs sensibles
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+// Amélioration de la lisibilité pour les utilisateurs dyslexiques
+body {
+    font-weight: 500;
+    
+    @media (prefers-contrast: more) {
+        font-weight: 500;
+    }
+}

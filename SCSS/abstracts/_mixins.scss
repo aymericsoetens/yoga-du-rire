@@ -1,0 +1,37 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin gradient-bg($start, $end) {
+    background: linear-gradient(135deg, $start, $end);
+}
+
+@mixin transition($property: all) {
+    transition: $property $transition;
+}
+
+// Nouveau: mixin pour contraste amélioré
+@mixin focus-outline {
+    outline: 3px solid $primary-dark;
+    outline-offset: 2px;
+}
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint == tablet {
+        @media (max-width: $breakpoint-tablet) { @content; }
+    }
+    @if $breakpoint == desktop {
+        @media (max-width: $breakpoint-desktop) { @content; }
+    }
+    @if $breakpoint == mobile {
+        @media (max-width: $breakpoint-mobile) { @content; }
+    }
+}
