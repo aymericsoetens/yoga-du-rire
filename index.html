@@ -106,7 +106,7 @@
                                                 <div style="background-color:#F4F4F4; border-radius:4px; flex-grow:0; height:14px; width:144px;"></div>
                                             </div>
                                         </a>
-                                        <p style="color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+                                        <p style="color:#ffffff; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
                                             <a href="https://www.instagram.com/reel/DOQ8oOCDPMs/?utm_source=ig_embed&amp;utm_campaign=loading" style="color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Une publication partagée par Astrid Yoga du Rire (@astridyogadurire)</a>
                                         </p>
                                     </div>
@@ -206,19 +206,130 @@
         </div>
     </footer>
 
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
-        if (hamburger && navMenu) {
-            hamburger.addEventListener('click', () => {
-                hamburger.classList.toggle('active');
-                navMenu.classList.toggle('active');
-            });
-            document.querySelectorAll('.nav-menu a').forEach(n => n.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            }));
-        }
+   <script>
+        // ============================================
+        // 1. MENU HAMBURGER (navigation responsive)
+        // ============================================
+        (function initMobileMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (hamburger && navMenu) {
+                const toggleMenu = () => {
+                    hamburger.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                };
+                
+                hamburger.addEventListener('click', toggleMenu);
+                
+                // Fermer le menu après clic sur un lien
+                document.querySelectorAll('.nav-menu a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        hamburger.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    });
+                });
+            }
+        })();
+        
+        // ============================================
+        // 2. ANIMATION D'APPARITION DE LA VIDEO
+        // ============================================
+        (function initVideoAppearance() {
+            const videoCard = document.querySelector('.video-card');
+            
+            if (videoCard) {
+                // La classe CSS .video-card a déjà l'animation videoReveal
+                // On s'assure juste que l'animation se déclenche au chargement
+                // en forçant un reflow si nécessaire (optionnel)
+                videoCard.style.animation = 'videoReveal 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards';
+                videoCard.style.animationDelay = '0.2s';
+                
+                // Ajouter une classe pour déclencher l'animation des éléments enfants
+                setTimeout(() => {
+                    const instaContent = document.querySelector('.instagram-cropped');
+                    if (instaContent) {
+                        instaContent.style.animation = 'contentFadeIn 0.5s ease-out forwards';
+                    }
+                }, 100);
+            }
+        })();
+        
+        // ============================================
+        // 3. CHARGEMENT DYNAMIQUE DU SCRIPT INSTAGRAM
+        // ============================================
+        (function loadInstagramEmbed() {
+            // Vérifier si le script Instagram est déjà présent
+            if (typeof window.instgrm === 'undefined') {
+                const script = document.createElement('script');
+                script.src = "//www.instagram.com/embed.js";
+                script.async = true;
+                script.defer = true;
+                document.body.appendChild(script);
+            } else if (window.instgrm && window.instgrm.Embeds) {
+                // Si déjà chargé, traiter les nouveaux embeds
+                window.instgrm.Embeds.process();
+            }
+        })();
+        
+        // ============================================
+        // 4. ANIMATIONS SUPPLEMENTAIRES (SCROLL REVEAL)
+        // ============================================
+        (function initScrollReveal() {
+            // Animation douce des cartes bienfaits au scroll
+            const benefitCards = document.querySelectorAll('.benefit-card');
+            const sectionHeader = document.querySelector('.section-header');
+            
+            const observerOptions = {
+                threshold: 0.2,
+                rootMargin: '0px 0px -20px 0px'
+            };
+            
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            // Appliquer les styles initiaux et observer
+            if (benefitCards.length) {
+                benefitCards.forEach((card, index) => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(30px)';
+                    card.style.transition = `opacity 0.6s ease-out ${index * 0.1}s, transform 0.6s ease-out ${index * 0.1}s`;
+                    revealObserver.observe(card);
+                });
+            }
+            
+            if (sectionHeader) {
+                sectionHeader.style.opacity = '0';
+                sectionHeader.style.transform = 'translateY(20px)';
+                sectionHeader.style.transition = 'opacity 0.5s ease-out 0.1s, transform 0.5s ease-out 0.1s';
+                revealObserver.observe(sectionHeader);
+            }
+        })();
+        
+        // ============================================
+        // 5. GESTION DES ERREURS DE CHARGEMENT (optionnel)
+        // ============================================
+        (function handleVideoFallback() {
+            // En cas de problème avec l'embed Instagram, on garde une bonne expérience
+            const instaBlock = document.querySelector('.instagram-media');
+            if (instaBlock) {
+                // Ajouter un événement pour détecter si l'iframe ne se charge pas après 8 secondes
+                setTimeout(() => {
+                    const iframe = instaBlock.querySelector('iframe');
+                    if (!iframe || (iframe && !iframe.contentWindow)) {
+                        // Fallback silencieux : on laisse l'aperçu statique, pas d'erreur visible
+                        console.log('Instagram embed chargé partiellement');
+                    }
+                }, 8000);
+            }
+        })();
     </script>
 </body>
 </html>
