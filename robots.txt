@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://votredomaine.fr/sitemap.xml
