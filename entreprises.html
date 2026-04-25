@@ -38,10 +38,13 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "serviceType": "Yoga du rire en entreprise",
+  "name": "Yoga du rire en entreprise",
+  "serviceType": "Atelier bien-être et cohésion d'équipe",
+  "description": "Ateliers de yoga du rire pour entreprises et associations. Pratique accessible sans humour, pour réduire le stress, améliorer la communication et renforcer la cohésion d'équipe.",
   "provider": {
     "@type": "LocalBusiness",
     "name": "Yoga du Rire - Astrid Soetens",
+    "url": "https://yogadurire.fr/",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "La Roche sur Foron",
@@ -51,19 +54,61 @@
   },
   "areaServed": {
     "@type": "State",
-    "name": "Haute-Savoie, Annemasse, Genève, Annecy"
+    "name": "Haute-Savoie"
   },
   "audience": {
     "@type": "BusinessAudience",
     "audienceType": "Entreprises et associations"
   },
-  "benefits": [
-    "Cohésion d'équipe",
-    "Réduction du stress",
-    "Amélioration de la communication",
-    "Boost de la créativité",
-    "Bien-être au travail"
-  ]
+  "potentialAction": {
+    "@type": "ReserveAction",
+    "name": "Réserver un atelier",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://yogadurire.fr/contact.html",
+      "inLanguage": "fr",
+      "actionPlatform": [
+        "http://schema.org/DesktopWebPlatform",
+        "http://schema.org/MobileWebPlatform"
+      ]
+    }
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Prestations yoga du rire pour entreprises",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Atelier découverte",
+          "description": "Séance d'1h30 pour découvrir le yoga du rire en entreprise"
+        },
+        "price": "Sur devis",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Programme bien-être",
+          "description": "Séances régulières sur plusieurs semaines"
+        },
+        "price": "Sur devis",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Team Building",
+          "description": "Demi-journée ou journée complète dédiée à la cohésion d'équipe"
+        },
+        "price": "Sur devis",
+        "priceCurrency": "EUR"
+      }
+    ]
+  }
 }
 </script>
     <!-- FONTS & CSS -->
