@@ -71,28 +71,6 @@
         <priority>0.3</priority>
     </url>
     
-    <!-- Politique de confidentialité -->
-    <url>
-        <loc>https://yogadurire.fr/politique-confidentialite.html</loc>
-        <lastmod>2025-01-01</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
-    </url>
-    
-    <!-- Témoignages -->
-    <url>
-        <loc>https://yogadurire.fr/temoignages.html</loc>
-        <lastmod>2025-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <!-- FAQ -->
-    <url>
-        <loc>https://yogadurire.fr/faq.html</loc>
-        <lastmod>2025-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
+ 
     
 </urlset>
