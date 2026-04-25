@@ -37,9 +37,17 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Event",
+  "@type": "EventSeries",
   "name": "Séance de yoga du rire à La Roche sur Foron",
   "description": "Séance hebdomadaire de yoga du rire ouverte à tous. Participation libre, aucun prérequis nécessaire.",
+  "startDate": "2025-01-06T10:30:00+01:00",
+  "endDate": "2025-12-29T11:30:00+01:00",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "image": "https://yogadurire.fr/img/og-image.jpg",
+  "performer": {
+    "@type": "Person",
+    "name": "Astrid Soetens"
+  },
   "location": {
     "@type": "Place",
     "name": "La Base du Pays Rochois",
@@ -53,6 +61,7 @@
   },
   "offers": {
     "@type": "Offer",
+    "url": "https://yogadurire.fr/seances.html",
     "price": "0",
     "priceCurrency": "EUR",
     "availability": "https://schema.org/InStock",
@@ -60,11 +69,12 @@
   },
   "organizer": {
     "@type": "Person",
-    "name": "Astrid Soetens"
+    "name": "Astrid Soetens",
+    "url": "https://yogadurire.fr/a-propos.html"
   },
   "eventSchedule": {
     "@type": "Schedule",
-    "repeatCount": 52,
+    "repeatCount": "52",
     "repeatFrequency": "P1W",
     "startDate": "2025-01-06T10:30:00+01:00"
   }
