@@ -36,33 +36,112 @@
 <meta name="theme-color" content="#f3813a">
     
     <!-- ==================== SCHEMA.ORG JSON-LD ==================== -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Yoga du Rire - Astrid Soetens",
-      "alternateName": "Yoga du Rire Haute-Savoie",
-      "description": "Animatrice certifiée de yoga du rire en Haute-Savoie. Séances hebdomadaires à La Roche sur Foron, ateliers en entreprise et séances en visioconférence.",
-      "url": "https://yogadurire.fr/",
-      "logo": "https://yogadurire.fr/img/logo.png",
-      "image": "https://yogadurire.fr/img/astrid-soetens.webp",
-      "telephone": "+33630145756",
-      "email": "astrid@yogadurire.fr",
-      "priceRange": "€ (participation libre)",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "156 Avenue Charles de Gaulle",
-        "addressLocality": "La Roche sur Foron",
-        "postalCode": "74800",
-        "addressRegion": "Haute-Savoie",
-        "addressCountry": "FR"
+ <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Yoga du Rire - Astrid Soetens",
+  "alternateName": "Yoga du Rire Haute-Savoie",
+  "description": "Animatrice certifiée de yoga du rire en Haute-Savoie. Séances hebdomadaires à La Roche sur Foron, ateliers en entreprise et séances en visioconférence.",
+  "url": "https://yogadurire.fr/",
+  "logo": "https://yogadurire.fr/img/logo.png",
+  "image": "https://yogadurire.fr/img/astrid-soetens.webp",
+  "telephone": "+33630145756",
+  "email": "astrid@yogadurire.fr",
+  "priceRange": "€ (participation libre)",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "156 Avenue Charles de Gaulle",
+    "addressLocality": "La Roche sur Foron",
+    "postalCode": "74800",
+    "addressRegion": "Haute-Savoie",
+    "addressCountry": "FR"
+  },
+  "sameAs": [
+    "https://www.facebook.com/YogaRireAstridSoetens",
+    "https://www.instagram.com/astridyogadurire/"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services de yoga du rire",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Séances hebdomadaires de yoga du rire",
+          "description": "Séances collectives à La Roche sur Foron pour pratiquer le rire comme exercice de bien-être.",
+          "provider": {
+            "@type": "Person",
+            "name": "Astrid Soetens"
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "La Roche sur Foron"
+          },
+          "audience": {
+            "@type": "PeopleAudience",
+            "suggestedGender": "Unisex",
+            "eligibleAgeRange": {
+              "@type": "QuantitativeValue",
+              "minValue": "18",
+              "unitCode": "ANN"
+            }
+          }
+        }
       },
-      "sameAs": [
-        "https://www.facebook.com/YogaRireAstridSoetens",
-        "https://www.instagram.com/astridyogadurire/"
-      ]
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Ateliers yoga du rire en entreprise",
+          "description": "Ateliers sur mesure pour entreprises et associations, pour renforcer la cohésion d'équipe et réduire le stress.",
+          "provider": {
+            "@type": "Person",
+            "name": "Astrid Soetens"
+          },
+          "areaServed": {
+            "@type": "AdministrativeArea",
+            "name": "Haute-Savoie"
+          }
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Séances de yoga du rire en visioconférence",
+          "description": "Pratiquez le yoga du rire depuis chez vous, en groupe ou en individuel.",
+          "provider": {
+            "@type": "Person",
+            "name": "Astrid Soetens"
+          },
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://zoom.us/",
+            "availableLanguage": {
+              "@type": "Language",
+              "name": "Français"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Séance découverte de yoga du rire"
+      },
+      "price": "0",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
     }
-    </script>
+  ]
+}
+</script>
     
     <!-- FONTS & CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -126,7 +205,8 @@
                         <a href="yoga-du-rire.html" class="btn btn-secondary"><i class="fas fa-play-circle"></i> En savoir plus</a>
                     </div>
                 </div>
-                <div class="hero-video">
+                
+                <div class="videos-hero">
                     <div class="video-container">
                         <div class="video-crop-wrapper">
                             <div class="instagram-cropped">
@@ -186,7 +266,7 @@
                         </div>
                         <div class="video-credit-link">
                             <a href="https://www.instagram.com/astridyogadurire/" target="_blank">
-                                <i class="fab fa-instagram"></i> Une activité qui crée du lien !
+                                <p> Une activité qui crée du lien !</p>
                             </a>
                         </div>
                     </div>
