@@ -1,4 +1,4 @@
-import {initContactForm, initFormValidation} from './modules/form.js';
+
 import {loadInstagramEmbeds, observeInstagramEmbeds, refreshInstagramEmbeds} from './modules/instagram.js';
 import {initScrollReveal, initVideoAnimation, initCardHoverEffects} from './modules/animations.js';
 import {initMobileMenu} from './modules/menu.js';
@@ -11,9 +11,7 @@ initScrollReveal();
 initVideoAnimation();
 initCardHoverEffects();
 
-// Initialisation du formulaire de contact (si présent)
-initContactForm();
-initFormValidation();
+
 
 // Chargement des vidéos Instagram
 loadInstagramEmbeds();

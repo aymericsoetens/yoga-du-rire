@@ -1,3 +1,5 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 // Benefit cards
 .benefits-grid {
     display: grid;

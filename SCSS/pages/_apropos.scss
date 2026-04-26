@@ -1,3 +1,5 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 .about-photo {
     text-align: center;
     margin-bottom: 2.5rem;

@@ -1,3 +1,5 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 // _video.scss - version unifiée
 .video-card {
     background: $white;
@@ -81,13 +83,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;               // Augmenté (était 30px)
 }
 
 .video-container {
-    max-width: 200px;
-    flex: 1;
-    min-width: 200px;
+    max-width: 320px;        // Était 200px → plus large
+    flex: 1 1 280px;         // Remplace flex: 1; min-width: 200px;
+    min-width: 280px;
     background: transparent;
     border-radius: 28px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
@@ -99,7 +101,6 @@
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.507);
     }
 }
-
 
 
 .hero-video {

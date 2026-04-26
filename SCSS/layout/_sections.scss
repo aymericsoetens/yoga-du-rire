@@ -1,3 +1,5 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 section {
     padding: 80px 0;
 }
@@ -111,7 +113,7 @@ section {
         color: $white;               // Blanc
 
         &:hover {
-            background: darken($text-dark, 10%);
+           
             color: $white;
             transform: translateY(-3px);
         }

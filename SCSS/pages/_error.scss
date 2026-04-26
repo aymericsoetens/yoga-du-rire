@@ -1,0 +1,48 @@
+ @use '../abstracts/variables' as *;
+ .error-404 {
+            text-align: center;
+            padding: 85px 20px;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .error-container {
+            max-width: 600px;
+            margin: 0 auto;
+             padding: 50px 20px;
+        }
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            color: var(--primary);
+            font-family: 'Lobster Two', sans-serif;
+            line-height: 1;
+            margin-top: 40px;
+        }
+        .error-message {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+           
+        }
+        .error-description {
+            color: var(--text-body);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        .error-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .error-icon {
+            font-size: 4rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+         @media (max-width: 768px) {
+            .error-code { font-size: 5rem; }
+            .error-message { font-size: 1.2rem; }
+        }
