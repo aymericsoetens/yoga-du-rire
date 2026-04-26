@@ -15,7 +15,7 @@
 
 .hero-content {
     flex: 1.2;
-    min-width: 300px;
+    min-width: 0;   // plus de contrainte, l'élément peut rétrécir
 }
 
 .hero-badge {

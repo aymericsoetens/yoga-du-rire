@@ -43,14 +43,14 @@
         to { opacity: 1; }
     }
 
-    .instagram-media,
-    iframe,
-    blockquote {
-        margin: 0 auto !important;
-        width: 350px !important;
-        min-width: 326px !important;
-        max-width: 540px !important;
-    }
+ .instagram-cropped .instagram-media,
+.instagram-cropped iframe,
+.instagram-cropped blockquote {
+    margin: 0 auto !important;
+    width: 350px !important;
+    min-width: 326px !important;
+    max-width: 540px !important;
+}
 }
 
 .video-credit-link {
