@@ -23,21 +23,23 @@
 }
 
 .video-crop-wrapper {
-    max-height: 350px;
+    max-height: 800px;
     border: none;
     overflow: hidden;
     background: #f5f5f5;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+   //max-width:   400px;
+    //min-width: 326px !important;
 }
 
 .instagram-cropped {
-    transform: translateY(-70px);
-    margin-bottom: 160px;
-    max-height: 400px;
+    transform: translateY(40px);
+     margin: -100px -10px;
+    max-height: 550px;
     animation: contentFadeIn 3s ease-out forwards;
-
+//width: 310px !important;
     @keyframes contentFadeIn {
         from { opacity: 0; }
         to { opacity: 1; }
@@ -47,7 +49,7 @@
 .instagram-cropped iframe,
 .instagram-cropped blockquote {
     margin: 0 auto !important;
-    width: 350px !important;
+    width: 100% !important;
     min-width: 326px !important;
     max-width: 540px !important;
 }

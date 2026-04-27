@@ -31,16 +31,16 @@ export function initScrollReveal() {
         if (element) {
             element.style.opacity = '0';
             element.style.transform = 'translateY(30px)';
-            element.style.transition = `opacity 0.6s ease-out ${index * 0.1}s, transform 0.6s ease-out ${index * 0.1}s`;
+            // element.style.transition = `opacity 0.6s ease-out ${index * 0.1}s, transform 0.6s ease-out ${index * 0.1}s`;
             revealObserver.observe(element);
         }
     });
     
     sectionHeaders.forEach(header => {
         if (header) {
-            header.style.opacity = '0';
+           // header.style.opacity = '0';
             header.style.transform = 'translateY(20px)';
-            header.style.transition = 'opacity 0.5s ease-out 0.1s, transform 0.5s ease-out 0.1s';
+           // header.style.transition = 'opacity 0.5s ease-out 0.1s, transform 0.5s ease-out 0.1s';
             revealObserver.observe(header);
         }
     });
@@ -53,14 +53,14 @@ export function initVideoAnimation() {
     if (videoCard) {
         // La classe CSS gère déjà l'animation
         // On s'assure juste qu'elle se déclenche
-        videoCard.style.animation = 'videoReveal 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards';
+       // videoCard.style.animation = 'videoReveal 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards';
         videoCard.style.animationDelay = '0.2s';
         
         // Animation du contenu Instagram
         setTimeout(() => {
             const instaContent = document.querySelector('.instagram-cropped');
             if (instaContent) {
-                instaContent.style.animation = 'contentFadeIn 0.5s ease-out forwards';
+                //instaContent.style.animation = 'contentFadeIn 0.5s ease-out forwards';
             }
         }, 100);
     }
@@ -72,7 +72,7 @@ export function initCardHoverEffects() {
     
     cards.forEach(card => {
         card.addEventListener('mouseenter', () => {
-            card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+           // card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
         });
     });
 }

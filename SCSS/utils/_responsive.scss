@@ -30,10 +30,10 @@
 
     // Grilles & espacements
     .benefits-grid, .steps { gap: 24px; }
-    .videos-grid { gap: 30px; }
+    .videos-grid { gap: 0px; }
     .video-container {
         max-width: 100% !important;
-        min-width: 100% !important;
+        min-width: 60% !important;
         margin-bottom: 20px;
     }
 
@@ -50,9 +50,6 @@
 
 // ─── Mobile (≤ 480px) ──────────────────────────────
 @include responsive(mobile) {
-    .videos-hero {
-        max-width: 100%;
-    }
 
     .video-container {
         max-width: 100% !important;
@@ -62,16 +59,18 @@
         margin-bottom: 20px;
     }
 
-    /*  Surcharge des styles d'iframe Instagram
+
+    //  Surcharge des styles d'iframe Instagram
     .instagram-cropped .instagram-media,
     .instagram-cropped iframe,
     .instagram-cropped blockquote {
         width: 100% !important;
-        min-width: 0 !important;
-        max-width: 100% !important;
-        margin-left: 0 !important;
+        min-width: 300px !important;
+        max-width: 450px !important;
+        margin-left: 8px !important;
         margin-right: 0 !important;
-    }*/
+        
+    }
 
     .hero, .page-hero {
         padding: 100px 10px 40px;
@@ -120,9 +119,7 @@
         padding: 4px 10px;
     }
 
-    .container {
-        padding: 0 16px;
-    }
+  
 
     .content-grid {
         grid-template-columns: 1fr;
@@ -151,8 +148,8 @@
 
     .hero-buttons { flex-direction: column; align-items: center; }
     .btn { justify-content: center; width: 100%; max-width: 320px; }
-    .video-crop-wrapper { max-height: 800px; }
-    .instagram-cropped { transform: translateY(-40px); margin-bottom: -120px; }
+    .video-crop-wrapper { max-height: 800px;}
+    .instagram-cropped { transform: translatey(50px); margin: -100px -10px ; }
     .instagram-cropped .instagram-media,
     .instagram-cropped iframe,
     .instagram-cropped blockquote {
@@ -178,6 +175,7 @@
     .footer-grid { gap: 30px; }
     .contact-grid { gap: 24px; }
 }
+
 
 // ─── Animation hamburger ───────────────────────────
 .hamburger span { transition: all 0.3s ease; }
